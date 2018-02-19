@@ -39,7 +39,7 @@ RUN mkdir -p /etc/jasmin/resource \
 RUN sed -i '/\[jcli\]/a authentication=False' /etc/jasmin/jasmin.cfg
 RUN sed -i '/\[jcli\]/a bind=0.0.0.0' /etc/jasmin/jasmin.cfg
 
-EXPOSE 2775 8990 1401
+EXPOSE 2775 8990 1401 5672 15672
 VOLUME ["/var/log/jasmin", "/etc/jasmin", "/etc/jasmin/store"]
 
 #COPY config/configs.py /usr/local/lib/python2.7/dist-packages/jasmin/queues/
