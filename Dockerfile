@@ -42,7 +42,7 @@ RUN sed -i '/\[jcli\]/a bind=0.0.0.0' /etc/jasmin/jasmin.cfg
 EXPOSE 2775 8990 1401
 VOLUME ["/var/log/jasmin", "/etc/jasmin", "/etc/jasmin/store"]
 
-COPY config/configs.py /usr/local/lib/python2.7/dist-packages/jasmin/queues/
+#COPY config/configs.py /usr/local/lib/python2.7/dist-packages/jasmin/queues/
 COPY config/clients.py /usr/local/lib/python2.7/dist-packages/jasmin/managers/
 COPY config/pdu_encoding.py /usr/local/lib/python2.7/dist-packages/jasmin/vendor/smpp/pdu/
 COPY config/factory.py /usr/local/lib/python2.7/dist-packages/jasmin/protocols/smpp/
