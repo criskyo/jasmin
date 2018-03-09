@@ -17,7 +17,7 @@ class AmqpConfig(ConfigFile):
         ConfigFile.__init__(self, config_file)
 
         self.host = self._get('amqp-broker', 'host', '35.192.138.175')
-        self.port = self._getint('amqp-broker', 'port', 9923)
+        self.port = self._getint('amqp-broker', 'port', 5672)
         self.username = self._get('amqp-broker', 'username', 'test')
         self.password = self._get('amqp-broker', 'password', 'test')
         self.vhost = self._get('amqp-broker', 'vhost', '/')
