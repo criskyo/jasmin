@@ -5,7 +5,7 @@ MAINTAINER Jookies LTD <jasmin@jookies.net>
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN groupadd -r jasmin && useradd -r -g jasmin jasmin
 
-ENV JASMIN_VERSION 0.9b1
+ENV JASMIN_VERSION 0.9.26
 
 # Install requirements
 RUN apt-get update && apt-get install -y \
@@ -32,7 +32,7 @@ RUN mkdir -p /etc/jasmin/resource \
   && pip install redis \
   && pip install https://pypi.python.org/packages/py2.py3/p/pika/pika-0.10.0-py2.py3-none-any.whl \
   && pip install https://pypi.python.org/packages/source/t/txAMQP/txAMQP-0.6.2.tar.gz \
-  && pip install --pre jasmin=="$JASMIN_VERSION" 
+  && pip install --pre jasmin=="$JASMIN_VERSION" \
 
 
 # Change binding host for jcli
